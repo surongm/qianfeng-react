@@ -19,6 +19,7 @@ class App extends Component {
 //     title:"继承"
 // }).render()
 
+// render是react dom的一个方法， 这个方法一般只会调用一次 其他都可以是他的子组件
 render(
     <App  title="继承"/>,
     // app,
