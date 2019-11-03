@@ -30,13 +30,48 @@ export default class App extends Component {
             ]
         }
     }
+
+    addTodo = (todoTitle) =>{
+        console.log(todoTitle)
+        // push返回的是数组的长度
+        // this.setState({
+        //     todos: this.state.todos.push({
+        //         id: Math.random(),
+        //         title:todoTitle,
+        //         isCompleted: false
+        //     })
+        // })
+
+        // √ concat生成一个新数组
+        // this.setState({
+        //     todos: this.state.todos.concat({
+        //         id: Math.random(),
+        //         title:todoTitle,
+        //         isCompleted: false
+        //     })
+        // })
+
+        // √
+        // 数组的拷贝
+        // const newTodos = this.state.todos.slice()
+        const newTodos = [...this.state.todos]
+        newTodos.push({
+            id: Math.random(),
+            title:todoTitle,
+            isCompleted: false
+        })
+        this.setState({
+            todos: newTodos
+        })
+    }
+
     render() {
         return (
             <div>
                 <TodoHeader title={this.state.title}> 
                     {this.state.statedesc}
                 </TodoHeader>
-                <TodoInput/>
+                <TodoInput addTodo={this.addTodo}/>
                 <TodoList  btnText="ADD" todos={this.state.todos} />
                 <Like />
 
