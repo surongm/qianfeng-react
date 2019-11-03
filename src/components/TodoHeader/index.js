@@ -10,16 +10,13 @@ export default function TodoHeader(props) {
                 {props.title}
             </h1>
             <p>{props.children}</p>
-            <p>{props.x + props.y}</p>
         </>
     )
 }
 
 // 函数式组件PropTypes写法
 TodoHeader.propTypes = {
-    title: PropTypes.string.isRequired,
-    x: PropTypes.number.isRequired,
-    y: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired
 }
 
 // 函数式组件默认defaultProps写法

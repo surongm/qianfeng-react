@@ -6,13 +6,22 @@ import {
 } from './components'
 
 export default class App extends Component {
+    // 类组件才有state
+    // state = {
+    //     title:"待办事项列表"
+    // }
+    constructor(){
+        super()
+        this.state = {
+            title:"待办事项列表",
+            desc: "今日事，今日毕"
+        }
+    }
     render() {
         return (
-            // 除去多余的div标签
-            // Fragment 是一个react提供的空标签
             <Fragment>
-                <TodoHeader title="待办事项"  x ={1} y={2}> 
-                    今日事，今日毕
+                <TodoHeader title={this.state.title}> 
+                    {this.state.statedesc}
                 </TodoHeader>
                 <TodoInput/>
                 <TodoList  btnText="ADD"/>

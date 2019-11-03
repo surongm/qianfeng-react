@@ -7,23 +7,29 @@
  使用这个插件 ES7 React/Redux/GraphQL/React-Native snippets
  可使用rcc命令快速创建组件
 
- ## props
+ ## states
 
- props.title
- props.children 
+    // 类组件才有state
+    // state = {
+    //     title:"待办事项列表"
+    // }
+    constructor(){
+        super()
+        this.state = {
+            title:"待办事项列表",
+            desc: "今日事，今日毕"
+        }
+    }
 
- 父组件
- x = "1" y="2"
+ ## 组件分类 
+  ①函数式组件 类组件
+  ②函数式组件——无状态组件
+   类组件——有状态组件
+  ③受控组件——所有状态都没有 通过外部props控制
+   非受控组件——state控制
+   半受控组件
 
- 子组件
- x+y =12
-
-父组件
- x = {1} y={2}
-
- 子组件
- x+y =3
-
+<!-- 
  ## 检查 prop-types
 
  npm i prop-types -D
@@ -37,5 +43,6 @@
   // 组件的默认的值  外面的值优先显示
   static defaultProps = {
       btnText:'添加ADD'
-  }
+  } -->
+
 
