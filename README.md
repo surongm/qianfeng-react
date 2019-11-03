@@ -1,4 +1,4 @@
-(以下均为简洁版，要看复杂版请看前几个)
+
 ## npm
  npm 官网 
   https://www.npmjs.com
@@ -27,3 +27,5 @@
         text-align:center
     `
     <Title>类组件</Title>
+
+还有一种是 styled-jsx  可以直接在组件里写style标签 （代码看起来很乱 不推荐）
