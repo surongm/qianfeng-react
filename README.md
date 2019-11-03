@@ -7,20 +7,35 @@
  使用这个插件 ES7 React/Redux/GraphQL/React-Native snippets
  可使用rcc命令快速创建组件
 
- ## components目录
-  index.js  文件中 
-  ①export default  只能导出一个组件
+ ## props
 
-  <!-- 这种方式比较容易记住 -->
-  ② import Home from './Home'  （前面的Home不能带{}）
-  export {
-      Home,
-      Detail
+ props.title
+ props.children 
+
+ 父组件
+ x = "1" y="2"
+
+ 子组件
+ x+y =12
+
+父组件
+ x = {1} y={2}
+
+ 子组件
+ x+y =3
+
+ ## 检查 prop-types
+
+ npm i prop-types -D
+ import PropTypes  from 'prop-types'
+
+  // 类组件PropTypes写法
+  static propTypes = {
+      btnText: PropTypes.string.isRequired
   }
 
-  <!-- 推荐这种方式 -->
-  ③import Header from './Header'  （前面的Home带不带{}都可）
-  export { default as Header } from './Header'
-  export { default as Content } from './Content'
-  export { default as Footer } from './Footer'
+  // 组件的默认的值  外面的值优先显示
+  static defaultProps = {
+      btnText:'添加ADD'
+  }
 
