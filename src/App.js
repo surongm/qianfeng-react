@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import {
     TodoHeader,
     TodoInput,
-    TodoList
+    TodoList,
+    Like
 } from './components'
 
 export default class App extends Component {
@@ -37,20 +38,8 @@ export default class App extends Component {
                 </TodoHeader>
                 <TodoInput/>
                 <TodoList  btnText="ADD" todos={this.state.todos} />
-                {/* 三元运算符 */}
-                {/* {this.state.todos[0].isCompleted ? "完成" : "未完成"} */}
-                {/* {this.state.todos[0].isCompleted && "完成"} */}
+                <Like />
 
-                {/* 如何展示带标签 */}
-                <div dangerouslySetInnerHTML={{__html:this.state.article}}></div>
-                {this.state.article}
-
-                {/* map */}
-                {
-                    this.state.todos.map(todo => {
-                        return <div key={todo.id}>{todo.title}</div>
-                    })
-                }
             </div>
         )
     }

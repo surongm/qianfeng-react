@@ -4,8 +4,7 @@
   https://www.npmjs.com
 
 ## VSCode
- 使用这个插件 ES7 React/Redux/GraphQL/React-Native snippets
- 可使用rcc命令快速创建组件
+ https://emojipedia.org/
 
  ## props的传递
 
