@@ -24,3 +24,14 @@
   export { default as Content } from './Content'
   export { default as Footer } from './Footer'
 
+## 空标签
+  // 除去多余的div标签
+  ① Fragment 是一个react提供的空标签
+   import {Fragment } from 'react'
+   <Fragment>
+   </Fragment>
+
+  ② 或者直接使用 空标签
+    <>
+    </>
+
