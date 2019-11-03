@@ -31,6 +31,7 @@ class App extends Component {
                         第四种方式 使用styled-components  样式是一个组件
                         <Title>类组件</Title>
                     </li>
+                    <li>还有一种是 styled-jsx  可以直接在组件里写style标签 （代码看起来很乱 不推荐）</li>
                 </ol>
             </div>
         )
