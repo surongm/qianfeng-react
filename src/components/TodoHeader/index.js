@@ -9,7 +9,7 @@ export default function TodoHeader(props) {
             <h1>
                 {props.title}
             </h1>
-            <p>{props.children}</p>
+            {/* <p>{props.children}</p> */}
         </>
     )
 }
